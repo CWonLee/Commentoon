@@ -14,7 +14,7 @@ struct SplashView: View {
     var body: some View {
         VStack {
             if self.isActive {
-                ContentView()
+                TabbarView()
             } else {
                 Text("Splash View")
                     .font(Font.largeTitle)

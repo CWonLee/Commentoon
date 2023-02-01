@@ -11,7 +11,7 @@ import SwiftUI
 struct CommentoonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }
