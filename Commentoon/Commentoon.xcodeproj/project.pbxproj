@@ -11,6 +11,7 @@
 		3220768C298A6C7E00C9BDDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3220768B298A6C7E00C9BDDE /* ContentView.swift */; };
 		3220768E298A6C7F00C9BDDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3220768D298A6C7F00C9BDDE /* Assets.xcassets */; };
 		32207691298A6C7F00C9BDDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32207690298A6C7F00C9BDDE /* Preview Assets.xcassets */; };
+		32207699298A72C000C9BDDE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32207698298A72C000C9BDDE /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		3220768B298A6C7E00C9BDDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3220768D298A6C7F00C9BDDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32207690298A6C7F00C9BDDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		32207698298A72C000C9BDDE /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		32207688298A6C7E00C9BDDE /* Commentoon */ = {
 			isa = PBXGroup;
 			children = (
+				32207697298A729600C9BDDE /* Splash */,
 				32207689298A6C7E00C9BDDE /* CommentoonApp.swift */,
 				3220768B298A6C7E00C9BDDE /* ContentView.swift */,
 				3220768D298A6C7F00C9BDDE /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				32207690298A6C7F00C9BDDE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		32207697298A729600C9BDDE /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				32207698298A72C000C9BDDE /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				3220768C298A6C7E00C9BDDE /* ContentView.swift in Sources */,
 				3220768A298A6C7E00C9BDDE /* CommentoonApp.swift in Sources */,
+				32207699298A72C000C9BDDE /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
