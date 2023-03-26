@@ -22,6 +22,8 @@
 		32B97A4229CFDB9A0003AE29 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4129CFDB9A0003AE29 /* Color.swift */; };
 		32B97A4529CFF6C00003AE29 /* KeyWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4429CFF6C00003AE29 /* KeyWindow+.swift */; };
 		32B97A4729D001750003AE29 /* HomeHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4629D001750003AE29 /* HomeHeaderSection.swift */; };
+		32CE729429D0348000B8C56E /* HomeContentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE729329D0348000B8C56E /* HomeContentsSection.swift */; };
+		32CE729629D034A700B8C56E /* HomeContentsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE729529D034A700B8C56E /* HomeContentsItemView.swift */; };
 		41E51734A75E35052B8B25CE /* Pods_Commentoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		32B97A4129CFDB9A0003AE29 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		32B97A4429CFF6C00003AE29 /* KeyWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyWindow+.swift"; sourceTree = "<group>"; };
 		32B97A4629D001750003AE29 /* HomeHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderSection.swift; sourceTree = "<group>"; };
+		32CE729329D0348000B8C56E /* HomeContentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentsSection.swift; sourceTree = "<group>"; };
+		32CE729529D034A700B8C56E /* HomeContentsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentsItemView.swift; sourceTree = "<group>"; };
 		F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commentoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,10 +183,28 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		32F4833A29B631A50015C904 /* Section */ = {
+		32CE729129D0344700B8C56E /* Header */ = {
 			isa = PBXGroup;
 			children = (
 				32B97A4629D001750003AE29 /* HomeHeaderSection.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		32CE729229D0345C00B8C56E /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				32CE729329D0348000B8C56E /* HomeContentsSection.swift */,
+				32CE729529D034A700B8C56E /* HomeContentsItemView.swift */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		32F4833A29B631A50015C904 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				32CE729229D0345C00B8C56E /* Contents */,
+				32CE729129D0344700B8C56E /* Header */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -324,12 +346,14 @@
 				32B97A4729D001750003AE29 /* HomeHeaderSection.swift in Sources */,
 				3220768C298A6C7E00C9BDDE /* ContentView.swift in Sources */,
 				322076A6298A7E4E00C9BDDE /* RankingView.swift in Sources */,
+				32CE729429D0348000B8C56E /* HomeContentsSection.swift in Sources */,
 				3220768A298A6C7E00C9BDDE /* CommentoonApp.swift in Sources */,
 				322076A8298A7E5400C9BDDE /* SearchView.swift in Sources */,
 				32B97A4029CFD5700003AE29 /* TabbarView.swift in Sources */,
 				322076A1298A7DD000C9BDDE /* HomeView.swift in Sources */,
 				32B97A4229CFDB9A0003AE29 /* Color.swift in Sources */,
 				32B97A4529CFF6C00003AE29 /* KeyWindow+.swift in Sources */,
+				32CE729629D034A700B8C56E /* HomeContentsItemView.swift in Sources */,
 				32207699298A72C000C9BDDE /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
