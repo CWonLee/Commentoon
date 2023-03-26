@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SplashView: View {
     // @State : 값 변경 시 body값 다시 그려짐, body내에서만 사용해야함
-    @State var isActive:Bool = false
+    @State var isActive: Bool = false
     
     var body: some View {
         VStack {

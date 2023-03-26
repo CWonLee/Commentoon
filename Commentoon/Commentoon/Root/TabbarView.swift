@@ -1,80 +1,79 @@
 //
-//  TabbarView.swift
+//  RootTabView.swift
 //  Commentoon
 //
-//  Created by 이청원 on 2023/02/01.
+//  Created by blue-one-L on 2023/03/26.
 //
 
 import SwiftUI
 
 struct TabbarView: View {
-    init() {
-        let shadowImage = UIImage.gradientImageWithBounds(
-            bounds: CGRect(x: 0, y: 0, width: UIScreen.main.scale, height: 8),
-            colors: [
-                UIColor.clear.cgColor,
-                UIColor.black.withAlphaComponent(0.1).cgColor
-            ]
-        )
-        
-        let appearance = UITabBarAppearance()
-        appearance.configureWithTransparentBackground()
-        appearance.shadowImage = shadowImage
-        appearance.backgroundColor = .white
-        
-        UITabBar.appearance().standardAppearance = appearance
-        
-        UITabBar.appearance().barTintColor = .blue
-        UITabBar.appearance().unselectedItemTintColor = UIColor(named: "tabIconColor")
-        //https://velog.io/@leejh3224/iOS-TabBar-shadow-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95-trjugzee87
+    @State private var selectedIndex = 0
+    let tabBarImageNames = ["icTabHome", "icTabRanking", "icTabSearch", "icTabMy"]
+    let selectedTabBarImageNames = ["icSelectedTabHome", "icSelectedTabRanking", "icSelectedTabSearch", "icSelectedTabMy"]
+    let tabBarNames = ["홈", "랭킹", "검색", "마이"]
+    
+    func getKeyWindow() -> UIEdgeInsets {
+        let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        return scene?.windows.first?.safeAreaInsets ?? .zero
     }
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image("icTabHome")
-                    Text("홈")
+        VStack {
+            ZStack(alignment: .bottom) {
+                switch selectedIndex {
+                case 0:
+                    HomeView()
+                case 1:
+                    RankingView()
+                case 2:
+                    SearchView()
+                default:
+                    MyView()
                 }
-            RankingView()
-                .tabItem {
-                    Image("icTabRanking")
-                    Text("랭킹")
+            }
+            Spacer(minLength: 0)
+            VStack {
+                HStack {
+                    Spacer()
+                    ForEach(0..<tabBarImageNames.count, id: \.self) { num in
+                        VStack {
+                            Image(selectedIndex == num ? selectedTabBarImageNames[num] : tabBarImageNames[num])
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(Color(hex: 0x49454F))
+                            Text(tabBarNames[num])
+                                .font(.system(size: 11, weight: .regular))
+                                .foregroundColor(Color(hex: 0x49454F))
+                        }
+                        .frame(width: 80, height: 80)
+                        .gesture(
+                            TapGesture()
+                                .onEnded { _ in
+                                    selectedIndex = num
+                                }
+                        )
+                        if num == tabBarImageNames.count - 1 {
+                            Spacer()
+                        } else {
+                            Spacer()
+                                .frame(width: 2)
+                        }
+                    }
                 }
-            SearchView()
-                .tabItem {
-                    Image("icTabSearch")
-                    Text("검색")
-                }
-            MyView()
-                .tabItem {
-                    Image("icTabMy")
-                    Text("마이")
-                }
+                .frame(height: 80)
+                Spacer()
+            }
+            .frame(height: (getKeyWindow().bottom) + 80)
+            .background(
+                Color.white.shadow(color: Color.black.opacity(0.3), radius: 8, y: -2)
+            )
         }
-        .accentColor(.yellow)
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 
-struct TabbarView_Previews: PreviewProvider {
+struct RootTabView_Previews: PreviewProvider {
     static var previews: some View {
         TabbarView()
-    }
-}
-
-extension UIImage {
-    static func gradientImageWithBounds(bounds: CGRect, colors: [CGColor]) -> UIImage {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = bounds
-        gradientLayer.colors = colors
-        
-        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return UIImage()
-        }
-        gradientLayer.render(in: context)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image ?? UIImage()
     }
 }
