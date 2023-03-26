@@ -13,11 +13,6 @@ struct TabbarView: View {
     let selectedTabBarImageNames = ["icSelectedTabHome", "icSelectedTabRanking", "icSelectedTabSearch", "icSelectedTabMy"]
     let tabBarNames = ["홈", "랭킹", "검색", "마이"]
     
-    func getKeyWindow() -> UIEdgeInsets {
-        let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
-        return scene?.windows.first?.safeAreaInsets ?? .zero
-    }
-    
     var body: some View {
         VStack {
             ZStack(alignment: .bottom) {
@@ -68,7 +63,7 @@ struct TabbarView: View {
                 Color.white.shadow(color: Color.black.opacity(0.3), radius: 8, y: -2)
             )
         }
-        .ignoresSafeArea(edges: .bottom)
+        .ignoresSafeArea()
     }
 }
 

@@ -20,10 +20,14 @@
 		322076AF298AB92D00C9BDDE /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322076AE298AB92D00C9BDDE /* Color.xcassets */; };
 		32B97A4029CFD5700003AE29 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A3F29CFD5700003AE29 /* TabbarView.swift */; };
 		32B97A4229CFDB9A0003AE29 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4129CFDB9A0003AE29 /* Color.swift */; };
-		32F4833C29B633720015C904 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F4833B29B633720015C904 /* HomeHeaderView.swift */; };
+		32B97A4529CFF6C00003AE29 /* KeyWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4429CFF6C00003AE29 /* KeyWindow+.swift */; };
+		32B97A4729D001750003AE29 /* HomeHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4629D001750003AE29 /* HomeHeaderSection.swift */; };
+		41E51734A75E35052B8B25CE /* Pods_Commentoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15E6A71CA424340A73E52CE0 /* Pods-Commentoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commentoon.release.xcconfig"; path = "Target Support Files/Pods-Commentoon/Pods-Commentoon.release.xcconfig"; sourceTree = "<group>"; };
+		190060999163E71BA7A15661 /* Pods-Commentoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commentoon.debug.xcconfig"; path = "Target Support Files/Pods-Commentoon/Pods-Commentoon.debug.xcconfig"; sourceTree = "<group>"; };
 		32207686298A6C7E00C9BDDE /* Commentoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commentoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32207689298A6C7E00C9BDDE /* CommentoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentoonApp.swift; sourceTree = "<group>"; };
 		3220768B298A6C7E00C9BDDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,7 +42,9 @@
 		322076AE298AB92D00C9BDDE /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		32B97A3F29CFD5700003AE29 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		32B97A4129CFDB9A0003AE29 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		32F4833B29B633720015C904 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		32B97A4429CFF6C00003AE29 /* KeyWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyWindow+.swift"; sourceTree = "<group>"; };
+		32B97A4629D001750003AE29 /* HomeHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderSection.swift; sourceTree = "<group>"; };
+		F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commentoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41E51734A75E35052B8B25CE /* Pods_Commentoon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +64,8 @@
 			children = (
 				32207688298A6C7E00C9BDDE /* Commentoon */,
 				32207687298A6C7E00C9BDDE /* Products */,
+				C11FB373E6E14F418F56AC36 /* Pods */,
+				8C05725E0BB6370BAF241FBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +80,7 @@
 		32207688298A6C7E00C9BDDE /* Commentoon */ = {
 			isa = PBXGroup;
 			children = (
+				32B97A4329CFF6A20003AE29 /* Common */,
 				322076AB298A801D00C9BDDE /* Resource */,
 				3220769E298A7DA600C9BDDE /* Main */,
 				3220769A298A7B9500C9BDDE /* Root */,
@@ -121,7 +131,7 @@
 		3220769F298A7DC700C9BDDE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				32F4833A29B631A50015C904 /* View */,
+				32F4833A29B631A50015C904 /* Section */,
 				322076A0298A7DD000C9BDDE /* HomeView.swift */,
 			);
 			path = Home;
@@ -161,12 +171,37 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		32F4833A29B631A50015C904 /* View */ = {
+		32B97A4329CFF6A20003AE29 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				32F4833B29B633720015C904 /* HomeHeaderView.swift */,
+				32B97A4429CFF6C00003AE29 /* KeyWindow+.swift */,
 			);
-			path = View;
+			path = Common;
+			sourceTree = "<group>";
+		};
+		32F4833A29B631A50015C904 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				32B97A4629D001750003AE29 /* HomeHeaderSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		8C05725E0BB6370BAF241FBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C11FB373E6E14F418F56AC36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				190060999163E71BA7A15661 /* Pods-Commentoon.debug.xcconfig */,
+				15E6A71CA424340A73E52CE0 /* Pods-Commentoon.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32207694298A6C7F00C9BDDE /* Build configuration list for PBXNativeTarget "Commentoon" */;
 			buildPhases = (
+				D6F41725B50DDC2B936D3013 /* [CP] Check Pods Manifest.lock */,
 				32207682298A6C7E00C9BDDE /* Sources */,
 				32207683298A6C7E00C9BDDE /* Frameworks */,
 				32207684298A6C7E00C9BDDE /* Resources */,
+				4C255772203BC1D6E64E37EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,20 +273,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C255772203BC1D6E64E37EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Commentoon/Pods-Commentoon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Commentoon/Pods-Commentoon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Commentoon/Pods-Commentoon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6F41725B50DDC2B936D3013 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Commentoon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32207682298A6C7E00C9BDDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				322076AA298A7E5B00C9BDDE /* MyView.swift in Sources */,
+				32B97A4729D001750003AE29 /* HomeHeaderSection.swift in Sources */,
 				3220768C298A6C7E00C9BDDE /* ContentView.swift in Sources */,
 				322076A6298A7E4E00C9BDDE /* RankingView.swift in Sources */,
-				32F4833C29B633720015C904 /* HomeHeaderView.swift in Sources */,
 				3220768A298A6C7E00C9BDDE /* CommentoonApp.swift in Sources */,
 				322076A8298A7E5400C9BDDE /* SearchView.swift in Sources */,
 				32B97A4029CFD5700003AE29 /* TabbarView.swift in Sources */,
 				322076A1298A7DD000C9BDDE /* HomeView.swift in Sources */,
 				32B97A4229CFDB9A0003AE29 /* Color.swift in Sources */,
+				32B97A4529CFF6C00003AE29 /* KeyWindow+.swift in Sources */,
 				32207699298A72C000C9BDDE /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +453,7 @@
 		};
 		32207695298A6C7F00C9BDDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 190060999163E71BA7A15661 /* Pods-Commentoon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -402,6 +483,7 @@
 		};
 		32207696298A6C7F00C9BDDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E6A71CA424340A73E52CE0 /* Pods-Commentoon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

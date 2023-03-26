@@ -9,10 +9,18 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("홈")
-//        List {
-//            HomeHeaderView()
-//        }
+        NavigationView {
+            ScrollView(.vertical) {
+                LazyVStack {
+                    HomeHeaderSection()
+                        .frame(height: 288)
+                    Spacer()
+                }
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .ignoresSafeArea()
+        .toolbar(.hidden, for: .navigationBar)
     }
 }
 
