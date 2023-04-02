@@ -16,13 +16,10 @@ struct HomeView: View {
                         .frame(height: 288)
                     Spacer().frame(height: 19)
                     HomeContentsSection()
-                        .frame(height: 194)
                     Spacer().frame(height: 23)
                     HomeContentsSection()
-                        .frame(height: 194)
                     Spacer().frame(height: 23)
                     HomeContentsSection()
-                        .frame(height: 194)
                     Spacer().frame(height: 23)
                     Spacer()
                 }

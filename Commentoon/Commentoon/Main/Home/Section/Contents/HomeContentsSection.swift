@@ -8,26 +8,31 @@
 import SwiftUI
 
 struct HomeContentsSection: View {
+    @State private var itemViewHeights: [CGFloat] = Array(repeating: 0, count: 10)
+    private var maxHeight: CGFloat {
+        itemViewHeights.max() ?? 0
+    }
+    private let itemViewWidth: CGFloat = 119
+    
     var body: some View {
-        GeometryReader { proxy in
-            VStack {
-                Text("서영 님의 최근 리뷰")
-                    .frame(width: proxy.size.width - 32, alignment: .leading)
-                    .lineLimit(1)
-                    .foregroundColor(.black)
-                    .font(.system(size: 16, weight: .bold))
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
+        VStack {
+            Text("서영 님의 최근 리뷰")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 16)
+                .lineLimit(1)
+                .foregroundColor(.black)
+                .font(.system(size: 16, weight: .bold))
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    Spacer().frame(width: 16)
+                    ForEach(0..<10) { _ in
+                        HomeContentsItemView()
+                            .frame(width: itemViewWidth)
                         Spacer().frame(width: 16)
-                        ForEach(0..<10) { _ in
-                            HomeContentsItemView().frame(width: 119, height: 162)
-                            Spacer().frame(width: 16)
-                        }
                     }
                 }
-                .frame(height: 162)
-                Spacer().frame(height: 23)
             }
+            Spacer().frame(height: 23)
         }
     }
 }
