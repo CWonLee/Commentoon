@@ -24,6 +24,8 @@
 		32B97A4729D001750003AE29 /* HomeHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4629D001750003AE29 /* HomeHeaderSection.swift */; };
 		32CE729429D0348000B8C56E /* HomeContentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE729329D0348000B8C56E /* HomeContentsSection.swift */; };
 		32CE729629D034A700B8C56E /* HomeContentsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE729529D034A700B8C56E /* HomeContentsItemView.swift */; };
+		32E6890529E6838900050D1A /* RankingHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6890429E6838900050D1A /* RankingHeaderSection.swift */; };
+		32E6890729E6870800050D1A /* RankingContentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6890629E6870800050D1A /* RankingContentsSection.swift */; };
 		41E51734A75E35052B8B25CE /* Pods_Commentoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		32B97A4629D001750003AE29 /* HomeHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderSection.swift; sourceTree = "<group>"; };
 		32CE729329D0348000B8C56E /* HomeContentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentsSection.swift; sourceTree = "<group>"; };
 		32CE729529D034A700B8C56E /* HomeContentsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentsItemView.swift; sourceTree = "<group>"; };
+		32E6890429E6838900050D1A /* RankingHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingHeaderSection.swift; sourceTree = "<group>"; };
+		32E6890629E6870800050D1A /* RankingContentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingContentsSection.swift; sourceTree = "<group>"; };
 		F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commentoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 		322076A2298A7DD500C9BDDE /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
+				32E6890129E6836500050D1A /* Section */,
 				322076A5298A7E4E00C9BDDE /* RankingView.swift */,
 			);
 			path = Ranking;
@@ -196,6 +201,31 @@
 			children = (
 				32CE729329D0348000B8C56E /* HomeContentsSection.swift */,
 				32CE729529D034A700B8C56E /* HomeContentsItemView.swift */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		32E6890129E6836500050D1A /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				32E6890329E6837400050D1A /* Contents */,
+				32E6890229E6836E00050D1A /* Header */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		32E6890229E6836E00050D1A /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				32E6890429E6838900050D1A /* RankingHeaderSection.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		32E6890329E6837400050D1A /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				32E6890629E6870800050D1A /* RankingContentsSection.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -344,7 +374,9 @@
 			files = (
 				322076AA298A7E5B00C9BDDE /* MyView.swift in Sources */,
 				32B97A4729D001750003AE29 /* HomeHeaderSection.swift in Sources */,
+				32E6890729E6870800050D1A /* RankingContentsSection.swift in Sources */,
 				3220768C298A6C7E00C9BDDE /* ContentView.swift in Sources */,
+				32E6890529E6838900050D1A /* RankingHeaderSection.swift in Sources */,
 				322076A6298A7E4E00C9BDDE /* RankingView.swift in Sources */,
 				32CE729429D0348000B8C56E /* HomeContentsSection.swift in Sources */,
 				3220768A298A6C7E00C9BDDE /* CommentoonApp.swift in Sources */,
