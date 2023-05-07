@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct MyView: View {
+    
     var body: some View {
-        Text("My View")
+        NavigationView {
+            ScrollView(.vertical) {
+                LazyVStack(spacing: 0) {
+                    MyHeaderSection()
+                }
+            }
+        }
+        .ignoresSafeArea()
+        .toolbar(.hidden, for: .navigationBar)
     }
 }
 

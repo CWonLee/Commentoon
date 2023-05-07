@@ -26,6 +26,7 @@
 		32CE729629D034A700B8C56E /* HomeContentsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CE729529D034A700B8C56E /* HomeContentsItemView.swift */; };
 		32E6890529E6838900050D1A /* RankingHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6890429E6838900050D1A /* RankingHeaderSection.swift */; };
 		32E6890729E6870800050D1A /* RankingContentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6890629E6870800050D1A /* RankingContentsSection.swift */; };
+		32F5636E2A078D59009EAF0A /* MyHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F5636D2A078D59009EAF0A /* MyHeaderSection.swift */; };
 		41E51734A75E35052B8B25CE /* Pods_Commentoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		32CE729529D034A700B8C56E /* HomeContentsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentsItemView.swift; sourceTree = "<group>"; };
 		32E6890429E6838900050D1A /* RankingHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingHeaderSection.swift; sourceTree = "<group>"; };
 		32E6890629E6870800050D1A /* RankingContentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingContentsSection.swift; sourceTree = "<group>"; };
+		32F5636D2A078D59009EAF0A /* MyHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderSection.swift; sourceTree = "<group>"; };
 		F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commentoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 		322076A4298A7E0100C9BDDE /* My */ = {
 			isa = PBXGroup;
 			children = (
+				32F5636B2A078D1D009EAF0A /* Section */,
 				322076A9298A7E5B00C9BDDE /* MyView.swift */,
 			);
 			path = My;
@@ -237,6 +240,22 @@
 				32CE729129D0344700B8C56E /* Header */,
 			);
 			path = Section;
+			sourceTree = "<group>";
+		};
+		32F5636B2A078D1D009EAF0A /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				32F5636C2A078D4B009EAF0A /* Header */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		32F5636C2A078D4B009EAF0A /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				32F5636D2A078D59009EAF0A /* MyHeaderSection.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		8C05725E0BB6370BAF241FBE /* Frameworks */ = {
@@ -376,6 +395,7 @@
 				32B97A4729D001750003AE29 /* HomeHeaderSection.swift in Sources */,
 				32E6890729E6870800050D1A /* RankingContentsSection.swift in Sources */,
 				3220768C298A6C7E00C9BDDE /* ContentView.swift in Sources */,
+				32F5636E2A078D59009EAF0A /* MyHeaderSection.swift in Sources */,
 				32E6890529E6838900050D1A /* RankingHeaderSection.swift in Sources */,
 				322076A6298A7E4E00C9BDDE /* RankingView.swift in Sources */,
 				32CE729429D0348000B8C56E /* HomeContentsSection.swift in Sources */,
