@@ -27,6 +27,7 @@
 		32E6890529E6838900050D1A /* RankingHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6890429E6838900050D1A /* RankingHeaderSection.swift */; };
 		32E6890729E6870800050D1A /* RankingContentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6890629E6870800050D1A /* RankingContentsSection.swift */; };
 		32F5636E2A078D59009EAF0A /* MyHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F5636D2A078D59009EAF0A /* MyHeaderSection.swift */; };
+		32F563702A07B3D7009EAF0A /* MyHeaderGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F5636F2A07B3D7009EAF0A /* MyHeaderGenreView.swift */; };
 		41E51734A75E35052B8B25CE /* Pods_Commentoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		32E6890429E6838900050D1A /* RankingHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingHeaderSection.swift; sourceTree = "<group>"; };
 		32E6890629E6870800050D1A /* RankingContentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingContentsSection.swift; sourceTree = "<group>"; };
 		32F5636D2A078D59009EAF0A /* MyHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderSection.swift; sourceTree = "<group>"; };
+		32F5636F2A07B3D7009EAF0A /* MyHeaderGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderGenreView.swift; sourceTree = "<group>"; };
 		F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commentoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				32F5636D2A078D59009EAF0A /* MyHeaderSection.swift */,
+				32F5636F2A07B3D7009EAF0A /* MyHeaderGenreView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				322076A8298A7E5400C9BDDE /* SearchView.swift in Sources */,
 				32B97A4029CFD5700003AE29 /* TabbarView.swift in Sources */,
 				322076A1298A7DD000C9BDDE /* HomeView.swift in Sources */,
+				32F563702A07B3D7009EAF0A /* MyHeaderGenreView.swift in Sources */,
 				32B97A4229CFDB9A0003AE29 /* Color.swift in Sources */,
 				32B97A4529CFF6C00003AE29 /* KeyWindow+.swift in Sources */,
 				32CE729629D034A700B8C56E /* HomeContentsItemView.swift in Sources */,
