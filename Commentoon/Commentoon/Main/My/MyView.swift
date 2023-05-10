@@ -14,6 +14,8 @@ struct MyView: View {
             ScrollView(.vertical) {
                 LazyVStack(spacing: 0) {
                     MyHeaderSection()
+                    Spacer().frame(height: 19)
+                    MyReviewSection()
                 }
             }
         }

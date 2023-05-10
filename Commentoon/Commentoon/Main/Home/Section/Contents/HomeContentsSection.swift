@@ -16,12 +16,9 @@ struct HomeContentsSection: View {
     
     var body: some View {
         VStack {
-            Text("서영 님의 최근 리뷰")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 16)
-                .lineLimit(1)
-                .foregroundColor(.black)
-                .font(.system(size: 16, weight: .bold))
+            CommonSectionHeaderView("서영 님의 최근 리뷰")
+                .frame(height: 24)
+            Spacer().frame(height: 8)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     Spacer().frame(width: 16)
@@ -32,7 +29,7 @@ struct HomeContentsSection: View {
                     }
                 }
             }
-            Spacer().frame(height: 23)
+            Spacer().frame(height: 25)
         }
     }
 }

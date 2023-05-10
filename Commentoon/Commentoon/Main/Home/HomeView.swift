@@ -14,13 +14,10 @@ struct HomeView: View {
                 LazyVStack {
                     HomeHeaderSection()
                         .frame(height: 288)
-                    Spacer().frame(height: 19)
+                    Spacer().frame(height: 32)
                     HomeContentsSection()
-                    Spacer().frame(height: 23)
                     HomeContentsSection()
-                    Spacer().frame(height: 23)
                     HomeContentsSection()
-                    Spacer().frame(height: 23)
                     Spacer()
                 }
             }
