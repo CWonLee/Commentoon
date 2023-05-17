@@ -30,9 +30,3 @@ struct HomeHeaderSection: View {
         }
     }
 }
-
-struct HomeHeaderSection_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeHeaderSection()
-    }
-}
