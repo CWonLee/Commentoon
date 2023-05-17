@@ -27,9 +27,3 @@ struct HomeView: View {
         .toolbar(.hidden, for: .navigationBar)
     }
 }
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}

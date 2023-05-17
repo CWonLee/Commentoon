@@ -23,19 +23,15 @@ struct HomeContentsSection: View {
                 HStack {
                     Spacer().frame(width: 16)
                     ForEach(0..<10) { _ in
-                        HomeContentsItemView()
-                            .frame(width: itemViewWidth)
+                        NavigationLink(destination: DetailWorkView()) {
+                            HomeContentsItemView()
+                                .frame(width: itemViewWidth)
+                        }
                         Spacer().frame(width: 16)
                     }
                 }
             }
             Spacer().frame(height: 25)
         }
-    }
-}
-
-struct HomeContentsSection_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeContentsSection()
     }
 }
