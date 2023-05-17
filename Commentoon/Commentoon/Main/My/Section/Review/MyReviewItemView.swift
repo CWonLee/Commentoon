@@ -24,7 +24,7 @@ struct MyReviewItemView: View {
                 VStack {
                     Spacer().frame(height: 5)
                     HStack(spacing: 0) {
-                        Image("icYellowStar").frame(width: 11, height: 11)
+                        Image(asset: Asset.Image.icYellowStar).frame(width: 11, height: 11)
                         Spacer().frame(width: 3)
                         Text("4.2")
                             .foregroundColor(.black)
@@ -41,23 +41,23 @@ struct MyReviewItemView: View {
                             .font(.system(size: 14, weight: .regular))
                             .lineLimit(1)
                         Text("제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 안보면 바보 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 안보면 바보")
-                            .foregroundColor(Color("gray004"))
+                            .foregroundColor(Color(asset: Asset.Color.gray004))
                             .font(.system(size: 13, weight: .regular))
                             .lineLimit(3)
                     }
                     Spacer()
                     HStack(spacing: 0) {
                         Spacer()
-                        Image("icHeart").frame(width: 12, height: 11)
+                        Image(asset: Asset.Image.icStar).frame(width: 12, height: 11)
                         Spacer().frame(width: 2)
                         Text("25")
-                            .foregroundColor(Color("gray004"))
+                            .foregroundColor(Color(asset: Asset.Color.gray004))
                             .font(.system(size: 11, weight: .regular))
                         Spacer().frame(width: 7)
-                        Image("icComment").frame(width: 13, height: 11)
+                        Image(asset: Asset.Image.icComment).frame(width: 13, height: 11)
                         Spacer().frame(width: 2)
                         Text("25")
-                            .foregroundColor(Color("gray004"))
+                            .foregroundColor(Color(asset: Asset.Color.gray004))
                             .font(.system(size: 11, weight: .regular))
                     }
                 }

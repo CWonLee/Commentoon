@@ -35,10 +35,10 @@ struct TabbarView: View {
                         VStack {
                             Image(selectedIndex == num ? selectedTabBarImageNames[num] : tabBarImageNames[num])
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(Color(hex: 0x49454F))
+                                .foregroundColor(Color(asset: selectedIndex == num ? Asset.Color.bluePointColor : Asset.Color.grayGnb))
                             Text(tabBarNames[num])
                                 .font(.system(size: 11, weight: .regular))
-                                .foregroundColor(Color(hex: 0x49454F))
+                                .foregroundColor(Color(asset: Asset.Color.grayGnb))
                         }
                         .frame(width: 80, height: 80)
                         .gesture(
@@ -64,11 +64,5 @@ struct TabbarView: View {
             )
         }
         .ignoresSafeArea()
-    }
-}
-
-struct RootTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabbarView()
     }
 }

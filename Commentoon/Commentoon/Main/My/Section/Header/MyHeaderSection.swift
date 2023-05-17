@@ -35,7 +35,7 @@ struct MyHeaderSection: View {
                                 .padding(.trailing, 30)
 
                             Text("판타지 장르를 좋아합니다. 다른 장르도 보긴 하는데 리뷰는 안 써요 판타지 장르를 좋아합니다. 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요")
-                                .foregroundColor(Color("gray004"))
+                                .foregroundColor(Color(asset: Asset.Color.gray004))
                                 .font(.system(size: 11, weight: .regular))
                                 .padding(.trailing, 20)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -63,7 +63,7 @@ struct MyHeaderSection: View {
                                 .foregroundColor(.black)
                                 .font(.system(size: 14, weight: .medium))
                             Text("팔로워")
-                                .foregroundColor(Color("gray004"))
+                                .foregroundColor(Color(asset: Asset.Color.gray004))
                                 .font(.system(size: 14, weight: .regular))
                         }
                         Spacer()
@@ -72,7 +72,7 @@ struct MyHeaderSection: View {
                                 .foregroundColor(.black)
                                 .font(.system(size: 14, weight: .medium))
                             Text("팔로잉")
-                                .foregroundColor(Color("gray004"))
+                                .foregroundColor(Color(asset: Asset.Color.gray004))
                                 .font(.system(size: 14, weight: .regular))
                         }
                         Spacer()
@@ -81,7 +81,7 @@ struct MyHeaderSection: View {
                                 .foregroundColor(.black)
                                 .font(.system(size: 14, weight: .medium))
                             Text("리뷰 수")
-                                .foregroundColor(Color("gray004"))
+                                .foregroundColor(Color(asset: Asset.Color.gray004))
                                 .font(.system(size: 14, weight: .regular))
                         }
                         Spacer().frame(width: 57)
@@ -90,11 +90,11 @@ struct MyHeaderSection: View {
                         .frame(height: 23)
                         .foregroundColor(.yellow)
                 }
-                .background(Color("grayBg"))
+                .background(Color(asset: Asset.Color.grayBg))
                 VStack {
                     HStack {
                         Spacer()
-                        Image("icSetting")
+                        Image(asset: Asset.Image.icSetting)
                             .resizable()
                             .frame(width: 17, height: 17)
                             .padding(.top, 12)

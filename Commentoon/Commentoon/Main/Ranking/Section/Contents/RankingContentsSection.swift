@@ -43,7 +43,7 @@ struct RankingContentsSection: View {
                             .font(.system(size: 13, weight: .medium))
                         Spacer()
                         HStack(spacing: 0) {
-                            Image("icStar")
+                            Image(asset: Asset.Image.icStar)
                                 .renderingMode(.template)
                                 .resizable()
                                 .scaledToFit()

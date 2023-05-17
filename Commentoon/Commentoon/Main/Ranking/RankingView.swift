@@ -22,7 +22,7 @@ struct RankingView: View {
                             .font(.system(size: 18, weight: .medium))
                         Text("웹툰·카카오")
                             .padding(EdgeInsets(top: 10, leading: 14, bottom: 0, trailing: 0))
-                            .foregroundColor(Color("bluePointColor"))
+                            .foregroundColor(Color(asset: Asset.Color.bluePointColor))
                             .font(.system(size: 16, weight: .medium))
                         Spacer()
                     }

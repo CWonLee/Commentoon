@@ -22,6 +22,7 @@
 		324232B02A0B8E8B009A0245 /* MyReviewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324232AF2A0B8E8B009A0245 /* MyReviewSection.swift */; };
 		324232B22A0B8EA5009A0245 /* MyReviewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324232B12A0B8EA5009A0245 /* MyReviewItemView.swift */; };
 		32996BF22A1470D200684DA5 /* DetailWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32996BF12A1470D200684DA5 /* DetailWorkView.swift */; };
+		32996BF62A14A3CA00684DA5 /* Asset+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32996BF52A14A3CA00684DA5 /* Asset+Generated.swift */; };
 		32B97A4029CFD5700003AE29 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A3F29CFD5700003AE29 /* TabbarView.swift */; };
 		32B97A4229CFDB9A0003AE29 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4129CFDB9A0003AE29 /* Color.swift */; };
 		32B97A4529CFF6C00003AE29 /* KeyWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4429CFF6C00003AE29 /* KeyWindow+.swift */; };
@@ -54,6 +55,7 @@
 		324232AF2A0B8E8B009A0245 /* MyReviewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewSection.swift; sourceTree = "<group>"; };
 		324232B12A0B8EA5009A0245 /* MyReviewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReviewItemView.swift; sourceTree = "<group>"; };
 		32996BF12A1470D200684DA5 /* DetailWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorkView.swift; sourceTree = "<group>"; };
+		32996BF52A14A3CA00684DA5 /* Asset+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Asset+Generated.swift"; sourceTree = "<group>"; };
 		32B97A3F29CFD5700003AE29 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		32B97A4129CFDB9A0003AE29 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		32B97A4429CFF6C00003AE29 /* KeyWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyWindow+.swift"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		322076AB298A801D00C9BDDE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				32996BF42A149F8C00684DA5 /* Generated */,
 				322076AC298A805300C9BDDE /* Image.xcassets */,
 				322076AE298AB92D00C9BDDE /* Color.xcassets */,
 				32B97A4129CFDB9A0003AE29 /* Color.swift */,
@@ -218,6 +221,14 @@
 				32996BF12A1470D200684DA5 /* DetailWorkView.swift */,
 			);
 			path = DetailWork;
+			sourceTree = "<group>";
+		};
+		32996BF42A149F8C00684DA5 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				32996BF52A14A3CA00684DA5 /* Asset+Generated.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		32B97A4329CFF6A20003AE29 /* Common */ = {
@@ -326,6 +337,7 @@
 				32207683298A6C7E00C9BDDE /* Frameworks */,
 				32207684298A6C7E00C9BDDE /* Resources */,
 				4C255772203BC1D6E64E37EC /* [CP] Embed Pods Frameworks */,
+				32996BF32A149DCE00684DA5 /* Run SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -384,6 +396,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		32996BF32A149DCE00684DA5 /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftgen >/dev/null; then\n  swiftgen config run\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
 		4C255772203BC1D6E64E37EC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,6 +465,7 @@
 				32E6890729E6870800050D1A /* RankingContentsSection.swift in Sources */,
 				3220768C298A6C7E00C9BDDE /* ContentView.swift in Sources */,
 				32F5636E2A078D59009EAF0A /* MyHeaderSection.swift in Sources */,
+				32996BF62A14A3CA00684DA5 /* Asset+Generated.swift in Sources */,
 				32E6890529E6838900050D1A /* RankingHeaderSection.swift in Sources */,
 				324232B02A0B8E8B009A0245 /* MyReviewSection.swift in Sources */,
 				322076A6298A7E4E00C9BDDE /* RankingView.swift in Sources */,

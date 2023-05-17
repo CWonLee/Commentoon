@@ -1,0 +1,7 @@
+xcassets:
+  inputs:
+    - Commentoon/Resource/Image.xcassets
+    - Commentoon/Resource/Color.xcassets
+  outputs:
+    - templateName: swift5
+      output: Commentoon/Resource/Generated/Asset+Generated.swift

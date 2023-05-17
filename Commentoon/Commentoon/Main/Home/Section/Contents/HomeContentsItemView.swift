@@ -22,7 +22,7 @@ struct HomeContentsItemView: View {
             Spacer().frame(height: 4)
             HStack {
                 Spacer().frame(width: 4)
-                Image("icStar").frame(width: 13, height: 13)
+                Image(asset: Asset.Image.icStar)
                 Spacer().frame(width: 2)
                 Text("4.5")
                     .lineLimit(1)
