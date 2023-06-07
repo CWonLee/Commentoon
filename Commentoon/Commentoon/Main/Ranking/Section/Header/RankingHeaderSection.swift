@@ -20,9 +20,3 @@ struct RankingHeaderSection: View {
         .background(.blue)
     }
 }
-
-struct RankingHeaderSection_Previews: PreviewProvider {
-    static var previews: some View {
-        RankingHeaderSection()
-    }
-}

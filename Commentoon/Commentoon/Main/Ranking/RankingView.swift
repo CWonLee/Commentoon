@@ -43,9 +43,3 @@ struct RankingView: View {
         .toolbar(.hidden, for: .navigationBar)
     }
 }
-
-struct RankingView_Previews: PreviewProvider {
-    static var previews: some View {
-        RankingView()
-    }
-}

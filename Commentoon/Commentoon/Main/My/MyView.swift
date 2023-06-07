@@ -23,9 +23,3 @@ struct MyView: View {
         .toolbar(.hidden, for: .navigationBar)
     }
 }
-
-struct MyView_Previews: PreviewProvider {
-    static var previews: some View {
-        MyView()
-    }
-}

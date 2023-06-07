@@ -104,8 +104,10 @@
 		32207688298A6C7E00C9BDDE /* Commentoon */ = {
 			isa = PBXGroup;
 			children = (
+				32A4EF652A30A12700A289BE /* Detail */,
 				32B97A4329CFF6A20003AE29 /* Common */,
 				322076AB298A801D00C9BDDE /* Resource */,
+				324232AB2A0B8AD8009A0245 /* Common */,
 				3220769E298A7DA600C9BDDE /* Main */,
 				3220769A298A7B9500C9BDDE /* Root */,
 				32207697298A729600C9BDDE /* Splash */,
@@ -144,8 +146,6 @@
 		3220769E298A7DA600C9BDDE /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				32996BF02A14709400684DA5 /* DetailWork */,
-				324232AB2A0B8AD8009A0245 /* Common */,
 				3220769F298A7DC700C9BDDE /* Home */,
 				322076A2298A7DD500C9BDDE /* Ranking */,
 				322076A3298A7DF700C9BDDE /* Search */,
@@ -205,7 +205,8 @@
 			children = (
 				324232AC2A0B8AF0009A0245 /* CommonSectionHeaderView.swift */,
 			);
-			path = Common;
+			name = Common;
+			path = Main/Common;
 			sourceTree = "<group>";
 		};
 		324232AE2A0B8E7F009A0245 /* Review */ = {
@@ -248,6 +249,14 @@
 				32996BF92A14CBE900684DA5 /* DetailWorkHeaderSection.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		32A4EF652A30A12700A289BE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				32996BF02A14709400684DA5 /* DetailWork */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		32B97A4329CFF6A20003AE29 /* Common */ = {
@@ -558,7 +567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -612,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
