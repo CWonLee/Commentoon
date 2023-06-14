@@ -10,11 +10,16 @@ import Kingfisher
 
 struct DetailWorkReviewItemView: View {
     let imageUrl = "https://i.ytimg.com/vi/u_gFUK09HZE/maxresdefault.jpg"
+    private let topPadding: CGFloat
+    
+    init(topPadding: CGFloat = 16) {
+        self.topPadding = topPadding
+    }
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             VStack(alignment: .leading) {
-                Spacer().frame(height: 16)
+                Spacer().frame(height: self.topPadding)
                 HStack {
                     Spacer().frame(width: 20)
                     KFImage(URL(string: imageUrl))

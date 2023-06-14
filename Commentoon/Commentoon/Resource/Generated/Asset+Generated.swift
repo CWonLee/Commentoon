@@ -31,10 +31,12 @@ internal enum Asset {
     internal static let gray005 = ColorAsset(name: "gray005")
     internal static let grayBg = ColorAsset(name: "grayBg")
     internal static let grayGnb = ColorAsset(name: "grayGnb")
+    internal static let grayStroke = ColorAsset(name: "grayStroke")
     internal static let yellowStar = ColorAsset(name: "yellowStar")
   }
   internal enum Image {
     internal static let icComment = ImageAsset(name: "icComment")
+    internal static let icDownArrow = ImageAsset(name: "icDownArrow")
     internal static let icHeart = ImageAsset(name: "icHeart")
     internal static let icRatingStar = ImageAsset(name: "icRatingStar")
     internal static let icSelectedTabHome = ImageAsset(name: "icSelectedTabHome")
