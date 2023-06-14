@@ -20,6 +20,8 @@ struct DetailWorkView: View {
                 DetailWorkHeaderSection()
                 Spacer().frame(height: 32)
                 DetailWorkScoreSection()
+                Spacer().frame(height: 12)
+                DetailWorkReviewItemView()
             }
         }
         .onAppear {
