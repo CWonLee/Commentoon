@@ -48,7 +48,7 @@ struct MyReviewItemView: View {
                     Spacer()
                     HStack(spacing: 0) {
                         Spacer()
-                        Image(asset: Asset.Image.icStar).frame(width: 12, height: 11)
+                        Image(asset: Asset.Image.icHeart).frame(width: 12, height: 11)
                         Spacer().frame(width: 2)
                         Text("25")
                             .foregroundColor(Color(asset: Asset.Color.gray004))

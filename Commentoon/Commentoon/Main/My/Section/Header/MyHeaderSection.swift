@@ -24,7 +24,6 @@ struct MyHeaderSection: View {
                                 .clipped()
                                 .cornerRadius(38)
                             Spacer().frame(height: 0)
-//                            Spacer()
                         }
                         Spacer().frame(width: 13)
                         VStack(alignment: .leading, spacing: 3) {
@@ -42,7 +41,6 @@ struct MyHeaderSection: View {
                         }
                         Spacer()
                     }
-                    .background(.green)
                     Spacer().frame(height: 13)
                     HStack {
                         Spacer().frame(width: 20)
@@ -54,8 +52,7 @@ struct MyHeaderSection: View {
                         }
                         Spacer(minLength: 20)
                     }
-                    .background(.red)
-                    
+                    Spacer().frame(height: 25)
                     HStack {
                         Spacer().frame(width: 57)
                         VStack(spacing: 5) {
@@ -86,9 +83,7 @@ struct MyHeaderSection: View {
                         }
                         Spacer().frame(width: 57)
                     }
-                    Rectangle()
-                        .frame(height: 23)
-                        .foregroundColor(.yellow)
+                    Spacer().frame(height: 23)
                 }
                 .background(Color(asset: Asset.Color.grayBg))
                 VStack {
