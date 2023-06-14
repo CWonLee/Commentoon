@@ -18,6 +18,8 @@ struct DetailWorkView: View {
         ScrollView {
             VStack(spacing: 0) {
                 DetailWorkHeaderSection()
+                Spacer().frame(height: 32)
+                DetailWorkScoreSection()
             }
         }
         .onAppear {
