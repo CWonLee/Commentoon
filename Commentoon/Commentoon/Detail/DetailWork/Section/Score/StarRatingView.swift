@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StarRatingView: View {
-    var rating: CGFloat
+    var rating: Float
 
     var body: some View {
         let stars = HStack(spacing: 2) {
@@ -22,7 +22,7 @@ struct StarRatingView: View {
 
         stars.overlay(
             GeometryReader { g in
-                let width = rating / CGFloat(5) * g.size.width
+                let width = CGFloat(rating / 5) * g.size.width
                 ZStack(alignment: .leading) {
                     Rectangle()
                         .frame(width: width)

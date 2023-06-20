@@ -23,7 +23,7 @@ struct HomeContentsSection: View {
                 HStack {
                     Spacer().frame(width: 16)
                     ForEach(0..<10) { _ in
-                        NavigationLink(destination: DetailWorkView()) {
+                        NavigationLink(destination: DetailWorkView(productId: 1)) {
                             HomeContentsItemView()
                                 .frame(width: itemViewWidth)
                         }

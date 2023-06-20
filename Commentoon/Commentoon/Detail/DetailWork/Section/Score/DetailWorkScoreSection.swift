@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct DetailWorkScoreSection: View {
+    @ObservedObject private var viewModel: DetailWorkViewModel
+    
+    init(viewModel: DetailWorkViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         VStack {
             DetailWorkScoreSectionHeaderView()
@@ -16,24 +22,22 @@ struct DetailWorkScoreSection: View {
                 Spacer()
                 VStack(spacing: 0) {
                     Spacer()
-                    Text("4.5")
+                    Text(String(format: "%.1f", viewModel.model?.averageScore ?? 0.0))
                         .font(.system(size: 24))
                         .foregroundColor(.black)
                     Spacer().frame(height: 10)
-                    StarRatingView(rating: 3.5)
+                    StarRatingView(rating: viewModel.model?.averageScore ?? 0.0)
                     Spacer().frame(height: 8)
-                    Text("24개의 리뷰")
+                    Text("\(viewModel.model?.reviewCount ?? 0)개의 리뷰")
                         .font(.system(size: 12))
                         .foregroundColor(Color(asset: Asset.Color.gray004))
                     Spacer()
                 }
                 Spacer().frame(width: 36)
                 VStack(spacing: 3) {
-                    GraphView()
-                    GraphView()
-                    GraphView()
-                    GraphView()
-                    GraphView()
+                    ForEach(stride(from: 5, to: 0, by: -1).reversed(), id: \.self) { index in
+                        GraphView(progress: viewModel.model?.scoreGraph?[5-index] ?? 0, index: index)
+                    }
                 }
                 Spacer()
             }

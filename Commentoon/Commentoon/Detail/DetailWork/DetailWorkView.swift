@@ -7,19 +7,20 @@
 
 import SwiftUI
 
-struct ProductModel: Codable {
-    let id: Int?
-    let title: String?
-    let thumbUrl: String?
-}
 
 struct DetailWorkView: View {
+    @ObservedObject private var viewModel: DetailWorkViewModel
+    
+    init (productId: Int) {
+        viewModel = DetailWorkViewModel(productId: productId)
+    }
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                DetailWorkHeaderSection()
+                DetailWorkHeaderSection(viewModel: viewModel)
                 Spacer().frame(height: 32)
-                DetailWorkScoreSection()
+                DetailWorkScoreSection(viewModel: viewModel)
                 Spacer().frame(height: 12)
                 DetailWorkMyReviewTitleView()
                 DetailWorkReviewItemView(topPadding: 6)
@@ -33,16 +34,7 @@ struct DetailWorkView: View {
             }
         }
         .onAppear {
-            APIManager.request(name: "GetProduct")
-                .path(["product_id": "1"])
-                .responseModel(model: ProductModel.self) { result in
-                    switch result {
-                    case .success(let response):
-                        print("response : \(response)")
-                    case .failure(let error):
-                        print("error : \(error)")
-                    }
-                }
+            viewModel.getProduct()
         }
         .toolbar(.hidden)
     }
