@@ -13,7 +13,6 @@ struct KFImageView: View {
 
     var body: some View {
         KFImage(URL(string: url))
-            .retry(maxCount: 3, interval: .seconds(5))
             .onFailure { error in
                 print("에러!! \(error)")
             }

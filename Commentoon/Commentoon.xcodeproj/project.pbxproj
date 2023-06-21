@@ -35,6 +35,8 @@
 		32A4EF682A30A16D00A289BE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4EF672A30A16D00A289BE /* APIManager.swift */; };
 		32A4EF6A2A30A28C00A289BE /* APIList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32A4EF692A30A28C00A289BE /* APIList.plist */; };
 		32B225842A42BD5700C649D4 /* KFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B225832A42BD5700C649D4 /* KFImageView.swift */; };
+		32B225892A42E86A00C649D4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B225882A42E86A00C649D4 /* LoginView.swift */; };
+		32B2258B2A42E93C00C649D4 /* KakaoLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B2258A2A42E93C00C649D4 /* KakaoLoginButton.swift */; };
 		32B97A4029CFD5700003AE29 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A3F29CFD5700003AE29 /* TabbarView.swift */; };
 		32B97A4229CFDB9A0003AE29 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4129CFDB9A0003AE29 /* Color.swift */; };
 		32B97A4529CFF6C00003AE29 /* KeyWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B97A4429CFF6C00003AE29 /* KeyWindow+.swift */; };
@@ -80,6 +82,9 @@
 		32A4EF672A30A16D00A289BE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		32A4EF692A30A28C00A289BE /* APIList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIList.plist; sourceTree = "<group>"; };
 		32B225832A42BD5700C649D4 /* KFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFImageView.swift; sourceTree = "<group>"; };
+		32B225852A42E6A200C649D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		32B225882A42E86A00C649D4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		32B2258A2A42E93C00C649D4 /* KakaoLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginButton.swift; sourceTree = "<group>"; };
 		32B97A3F29CFD5700003AE29 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		32B97A4129CFDB9A0003AE29 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		32B97A4429CFF6C00003AE29 /* KeyWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyWindow+.swift"; sourceTree = "<group>"; };
@@ -126,13 +131,11 @@
 		32207688298A6C7E00C9BDDE /* Commentoon */ = {
 			isa = PBXGroup;
 			children = (
+				32B225852A42E6A200C649D4 /* Info.plist */,
+				32B225872A42E84200C649D4 /* Screen */,
 				32A4EF662A30A16500A289BE /* API */,
-				32A4EF652A30A12700A289BE /* Detail */,
 				32B97A4329CFF6A20003AE29 /* Common */,
 				322076AB298A801D00C9BDDE /* Resource */,
-				3220769E298A7DA600C9BDDE /* Main */,
-				3220769A298A7B9500C9BDDE /* Root */,
-				32207697298A729600C9BDDE /* Splash */,
 				32207689298A6C7E00C9BDDE /* CommentoonApp.swift */,
 				3220768B298A6C7E00C9BDDE /* ContentView.swift */,
 				3220768D298A6C7F00C9BDDE /* Assets.xcassets */,
@@ -344,6 +347,27 @@
 				32B225832A42BD5700C649D4 /* KFImageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		32B225862A42E82D00C649D4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				32B225882A42E86A00C649D4 /* LoginView.swift */,
+				32B2258A2A42E93C00C649D4 /* KakaoLoginButton.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		32B225872A42E84200C649D4 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				32B225862A42E82D00C649D4 /* Login */,
+				32A4EF652A30A12700A289BE /* Detail */,
+				3220769E298A7DA600C9BDDE /* Main */,
+				3220769A298A7B9500C9BDDE /* Root */,
+				32207697298A729600C9BDDE /* Splash */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		32B97A4329CFF6A20003AE29 /* Common */ = {
@@ -587,6 +611,7 @@
 				325B473E2A3A06C500B7934C /* DetailWorkMyReviewTitleView.swift in Sources */,
 				3220768C298A6C7E00C9BDDE /* ContentView.swift in Sources */,
 				32996BFA2A14CBE900684DA5 /* DetailWorkHeaderSection.swift in Sources */,
+				32B225892A42E86A00C649D4 /* LoginView.swift in Sources */,
 				32F5636E2A078D59009EAF0A /* MyHeaderSection.swift in Sources */,
 				32996BF62A14A3CA00684DA5 /* Asset+Generated.swift in Sources */,
 				325B473C2A39FB2D00B7934C /* DetailWorkReviewItemView.swift in Sources */,
@@ -609,6 +634,7 @@
 				32B97A4529CFF6C00003AE29 /* KeyWindow+.swift in Sources */,
 				32CE729629D034A700B8C56E /* HomeContentsItemView.swift in Sources */,
 				32207699298A72C000C9BDDE /* SplashView.swift in Sources */,
+				32B2258B2A42E93C00C649D4 /* KakaoLoginButton.swift in Sources */,
 				323ECEC32A41A8B700E3650A /* ProductModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +768,7 @@
 				DEVELOPMENT_TEAM = 6UWSFQ86Y6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Commentoon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -772,6 +799,7 @@
 				DEVELOPMENT_TEAM = 6UWSFQ86Y6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Commentoon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
