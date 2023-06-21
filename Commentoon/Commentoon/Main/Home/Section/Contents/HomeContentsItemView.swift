@@ -13,12 +13,9 @@ struct HomeContentsItemView: View {
     
     var body: some View {
         VStack {
-            KFImage(URL(string: "https://image.yes24.com/goods/117243156/XL"))
-                .retry(maxCount: 3, interval: .seconds(5))
-                .resizable()
+            KFImageView(url: "https://image.yes24.com/goods/117243156/XL")
                 .frame(width: itemWidth, height: 125, alignment: .center)
                 .cornerRadius(20)
-                .clipped()
             Spacer().frame(height: 4)
             HStack {
                 Spacer().frame(width: 4)

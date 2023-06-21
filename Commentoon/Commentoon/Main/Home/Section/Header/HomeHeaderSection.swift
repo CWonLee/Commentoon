@@ -19,11 +19,8 @@ struct HomeHeaderSection: View {
         GeometryReader { proxy in
             TabView {
                 ForEach(imageUrls.indices, id: \.self) { index in
-                    KFImage(URL(string: imageUrls[index]))
-                        .retry(maxCount: 3, interval: .seconds(5))
-                        .resizable()
+                    KFImageView(url: imageUrls[index])
                         .frame(width: proxy.size.width, height: proxy.size.height, alignment: .center)
-                        .clipped()
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))

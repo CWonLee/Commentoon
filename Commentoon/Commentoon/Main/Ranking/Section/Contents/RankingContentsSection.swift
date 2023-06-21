@@ -15,11 +15,8 @@ struct RankingContentsSection: View {
         VStack {
             HStack(spacing: 0) {
                 Spacer().frame(width: 24)
-                KFImage(URL(string: imageUrl))
-                    .retry(maxCount: 3, interval: .seconds(5))
-                    .resizable()
+                KFImageView(url: imageUrl)
                     .frame(width: 99, height: 109)
-                    .clipped()
                     .cornerRadius(15)
                 Spacer().frame(width: 16)
                 VStack(alignment: .leading) {

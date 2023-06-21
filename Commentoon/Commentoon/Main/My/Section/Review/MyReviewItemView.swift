@@ -14,12 +14,9 @@ struct MyReviewItemView: View {
             Spacer().frame(height: 14)
             HStack {
                 Spacer().frame(width: 16)
-                KFImage(URL(string: "https://image.yes24.com/goods/117243156/XL"))
-                    .retry(maxCount: 3, interval: .seconds(5))
-                    .resizable()
+                KFImageView(url: "https://image.yes24.com/goods/117243156/XL")
                     .frame(width: 100, height: 141, alignment: .center)
                     .cornerRadius(18)
-                    .clipped()
                 Spacer().frame(width: 11)
                 VStack {
                     Spacer().frame(height: 5)

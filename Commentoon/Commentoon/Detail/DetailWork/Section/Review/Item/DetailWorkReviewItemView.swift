@@ -22,11 +22,8 @@ struct DetailWorkReviewItemView: View {
                 Spacer().frame(height: self.topPadding)
                 HStack {
                     Spacer().frame(width: 20)
-                    KFImage(URL(string: imageUrl))
-                        .retry(maxCount: 3, interval: .seconds(5))
-                        .resizable()
+                    KFImageView(url: imageUrl)
                         .frame(width: 38, height: 38)
-                        .clipped()
                         .cornerRadius(19)
                     Spacer().frame(width: 19)
                     VStack(alignment: .leading) {
