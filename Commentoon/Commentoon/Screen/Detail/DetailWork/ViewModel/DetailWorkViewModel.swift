@@ -23,7 +23,6 @@ class DetailWorkViewModel: ObservableObject {
                 case .success(let response):
                     DispatchQueue.main.async {
                         self?.model = response
-                        print(response.thumbUrl)
                     }
                 case .failure(let error):
                     print("error : \(error)")
