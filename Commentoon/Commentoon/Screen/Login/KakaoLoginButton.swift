@@ -38,17 +38,16 @@ struct KakaoLoginButton: View {
                 if let error = error {
                     print(error)
                 }
-                if let oauthToken = oauthToken,
-                   let idToken = oauthToken.idToken {
-                    requestKakaoToken(idToken)
+                if let oauthToken = oauthToken {
+                    requestKakaoToken(oauthToken.accessToken)
                 }
             }
         }
     }
     
-    private func requestKakaoToken(_ idToken: String) {
+    private func requestKakaoToken(_ accessToken: String) {
         APIManager.request(name: "AuthKakao")
-            .parameters(["code": idToken])
+            .headers(["Authorization": accessToken])
             .responseModel(model: String.self) { result in
                 switch result {
                 case .success(let response):
