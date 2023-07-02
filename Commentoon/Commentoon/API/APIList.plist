@@ -6,6 +6,13 @@
 	<string>https://commentoon-backend-4iwxestshq-du.a.run.app</string>
 	<key>apiList</key>
 	<dict>
+		<key>GetAllReviewFromProduct</key>
+		<dict>
+			<key>path</key>
+			<string>/api/v1/product/{product_id}/review</string>
+			<key>method</key>
+			<string>GET</string>
+		</dict>
 		<key>AuthKakao</key>
 		<dict>
 			<key>path</key>

@@ -10,9 +10,11 @@ import Kingfisher
 
 struct DetailWorkReviewItemView: View {
     let imageUrl = "https://i.ytimg.com/vi/u_gFUK09HZE/maxresdefault.jpg"
+    private let model: ReviewModel?
     private let topPadding: CGFloat
     
-    init(topPadding: CGFloat = 16) {
+    init(model: ReviewModel?, topPadding: CGFloat = 16) {
+        self.model = model
         self.topPadding = topPadding
     }
     
@@ -37,14 +39,14 @@ struct DetailWorkReviewItemView: View {
                             .foregroundColor(Color(asset: Asset.Color.gray005))
                     }
                     Spacer(minLength: 10)
-                    Text("4.5")
+                    Text("\(String(format: "%.1f", model?.score ?? 0.0))")
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(Color(asset: Asset.Color.yellowStar))
                     Spacer().frame(width: 5)
-                    StarRatingView(rating: 4.5)
+                    StarRatingView(rating: model?.score ?? 0.0)
                     Spacer().frame(width: 20)
                 }
-                Text("제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 안보면 바보")
+                Text(model?.description ?? "제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 제가 본 웹툰중에 제일 재밌어요. 안보면 바보")
                     .font(.system(size: 13))
                     .foregroundColor(.black)
                     .padding([.leading, .trailing], 20)

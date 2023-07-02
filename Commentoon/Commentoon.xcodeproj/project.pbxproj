@@ -50,6 +50,8 @@
 		32E6890729E6870800050D1A /* RankingContentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E6890629E6870800050D1A /* RankingContentsSection.swift */; };
 		32F5636E2A078D59009EAF0A /* MyHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F5636D2A078D59009EAF0A /* MyHeaderSection.swift */; };
 		32F563702A07B3D7009EAF0A /* MyHeaderGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F5636F2A07B3D7009EAF0A /* MyHeaderGenreView.swift */; };
+		32FD19A92A517A67007398EA /* DetailReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD19A82A517A67007398EA /* DetailReviewViewModel.swift */; };
+		32FD19AC2A517B48007398EA /* ReviewListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD19AB2A517B48007398EA /* ReviewListModel.swift */; };
 		41E51734A75E35052B8B25CE /* Pods_Commentoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,8 @@
 		32E6890629E6870800050D1A /* RankingContentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingContentsSection.swift; sourceTree = "<group>"; };
 		32F5636D2A078D59009EAF0A /* MyHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderSection.swift; sourceTree = "<group>"; };
 		32F5636F2A07B3D7009EAF0A /* MyHeaderGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderGenreView.swift; sourceTree = "<group>"; };
+		32FD19A82A517A67007398EA /* DetailReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReviewViewModel.swift; sourceTree = "<group>"; };
+		32FD19AB2A517B48007398EA /* ReviewListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListModel.swift; sourceTree = "<group>"; };
 		F0752B8B7C79CAC9193A9E3F /* Pods_Commentoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Commentoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -253,6 +257,7 @@
 		323ECEC02A41A8A700E3650A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				32FD19AA2A517B3E007398EA /* Review */,
 				323ECEC12A41A8AE00E3650A /* Product */,
 			);
 			path = Model;
@@ -295,6 +300,7 @@
 		3293F1662A4C18360052499E /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				32FD19A72A517A22007398EA /* ViewModel */,
 				3293F1692A4C18FF0052499E /* Section */,
 				3293F1672A4C18860052499E /* DetailReviewView.swift */,
 			);
@@ -489,6 +495,22 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		32FD19A72A517A22007398EA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				32FD19A82A517A67007398EA /* DetailReviewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		32FD19AA2A517B3E007398EA /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				32FD19AB2A517B48007398EA /* ReviewListModel.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
 		8C05725E0BB6370BAF241FBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -656,6 +678,7 @@
 				32F5636E2A078D59009EAF0A /* MyHeaderSection.swift in Sources */,
 				32996BF62A14A3CA00684DA5 /* Asset+Generated.swift in Sources */,
 				3293F1682A4C18860052499E /* DetailReviewView.swift in Sources */,
+				32FD19A92A517A67007398EA /* DetailReviewViewModel.swift in Sources */,
 				325B473C2A39FB2D00B7934C /* DetailWorkReviewItemView.swift in Sources */,
 				32E6890529E6838900050D1A /* RankingHeaderSection.swift in Sources */,
 				324232B02A0B8E8B009A0245 /* MyReviewSection.swift in Sources */,
@@ -680,6 +703,7 @@
 				32B2258B2A42E93C00C649D4 /* KakaoLoginButton.swift in Sources */,
 				3293F16F2A4C19770052499E /* DetailReviewCommentItemView.swift in Sources */,
 				323ECEC32A41A8B700E3650A /* ProductModel.swift in Sources */,
+				32FD19AC2A517B48007398EA /* ReviewListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

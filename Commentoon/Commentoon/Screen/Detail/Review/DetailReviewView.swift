@@ -11,25 +11,30 @@ struct DetailReviewView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
-        VStack {
-            ZStack {
-                HStack {
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Image(asset: Asset.Image.icBackArrow)
-                            .frame(width: 50)
+        ScrollView {
+            VStack {
+                ZStack {
+                    HStack {
+                        Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Image(asset: Asset.Image.icBackArrow)
+                                .frame(width: 50)
+                        }
+                        Spacer()
                     }
-                    Spacer()
+                    .frame(height: 42)
+                    Text("전지적 독자 시점")
+                        .font(.system(size: 16, weight: .black))
+                        .foregroundColor(.black)
+                        .padding([.leading, .trailing], 60)
+                        .lineLimit(1)
                 }
-                .frame(height: 42)
-                Text("전지적 독자 시점")
-                    .font(.system(size: 16, weight: .black))
-                    .foregroundColor(.black)
-                    .padding([.leading, .trailing], 60)
-                    .lineLimit(1)
+                DetailReviewReviewItemView()
+                ForEach(0..<5) { _ in
+                    DetailReviewCommentItemView()
+                }
             }
-            DetailReviewCommentItemView()
         }
         .toolbar(.hidden)
     }
