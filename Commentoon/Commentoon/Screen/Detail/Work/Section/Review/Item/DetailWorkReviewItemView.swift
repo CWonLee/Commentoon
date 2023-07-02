@@ -58,12 +58,16 @@ struct DetailWorkReviewItemView: View {
                         .font(.system(size: 14))
                         .foregroundColor(Color(asset: Asset.Color.gray005))
                     Spacer().frame(width: 24)
-                    Image(asset: Asset.Image.icComment)
-                        .resizable()
-                        .frame(width: 16, height: 13)
-                    Text("23")
-                        .font(.system(size: 14))
-                        .foregroundColor(Color(asset: Asset.Color.gray005))
+                    NavigationLink(destination: DetailReviewView()) {
+                        HStack {
+                            Image(asset: Asset.Image.icComment)
+                                .resizable()
+                                .frame(width: 16, height: 13)
+                            Text("23")
+                                .font(.system(size: 14))
+                                .foregroundColor(Color(asset: Asset.Color.gray005))
+                        }
+                    }
                     Spacer()
                 }
                 Spacer().frame(height: 22)

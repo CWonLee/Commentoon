@@ -20,13 +20,13 @@ struct CommentoonApp: App {
     var body: some Scene {
         WindowGroup {
 //            SplashView()
-//            TabbarView()
-            LoginView()
-                .onOpenURL { url in
-                    if AuthApi.isKakaoTalkLoginUrl(url) {
-                        _ = AuthController.handleOpenUrl(url: url)
-                    }
-                }
+            TabbarView()
+//            LoginView()
+//                .onOpenURL { url in
+//                    if AuthApi.isKakaoTalkLoginUrl(url) {
+//                        _ = AuthController.handleOpenUrl(url: url)
+//                    }
+//                }
         }
     }
 }

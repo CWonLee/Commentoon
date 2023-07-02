@@ -36,6 +36,7 @@ internal enum Asset {
   }
   internal enum Image {
     internal static let btnKakaoLogin = ImageAsset(name: "btnKakaoLogin")
+    internal static let icBackArrow = ImageAsset(name: "icBackArrow")
     internal static let icComment = ImageAsset(name: "icComment")
     internal static let icDownArrow = ImageAsset(name: "icDownArrow")
     internal static let icHeart = ImageAsset(name: "icHeart")
