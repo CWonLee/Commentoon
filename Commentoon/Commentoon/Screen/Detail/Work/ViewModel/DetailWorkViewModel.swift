@@ -29,6 +29,7 @@ class DetailWorkViewModel: ObservableObject {
                 case .success(let response):
                     DispatchQueue.main.async {
                         self?.productModel = response
+                        print("@@@@ \(response)")
                     }
                 case .failure(let error):
                     print("error : \(error)")

@@ -9,17 +9,17 @@ import SwiftUI
 import Kingfisher
 
 struct HomeHeaderSection: View {
-    let imageUrls: [String] = [
-        "https://i.ytimg.com/vi/u_gFUK09HZE/maxresdefault.jpg",
-        "https://i.ytimg.com/vi/M8ZTeGuqep0/maxresdefault.jpg",
-        "https://image.ajunews.com/content/image/2022/04/24/20220424121954730673.png"
-    ]
+    let model: [ProductModel]
+    
+    init(model: [ProductModel]) {
+        self.model = model
+    }
     
     var body: some View {
         GeometryReader { proxy in
             TabView {
-                ForEach(imageUrls.indices, id: \.self) { index in
-                    KFImageView(url: imageUrls[index])
+                ForEach(model, id: \.self) { product in
+                    KFImageView(url: product.thumbUrl ?? "")
                         .frame(width: proxy.size.width, height: proxy.size.height, alignment: .center)
                 }
             }

@@ -8,23 +8,28 @@
 import SwiftUI
 
 struct HomeContentsSection: View {
+    private let model: HomeTabSlotModel?
     @State private var itemViewHeights: [CGFloat] = Array(repeating: 0, count: 10)
     private var maxHeight: CGFloat {
         itemViewHeights.max() ?? 0
     }
     private let itemViewWidth: CGFloat = 119
     
+    init(model: HomeTabSlotModel?) {
+        self.model = model
+    }
+    
     var body: some View {
         VStack {
-            CommonSectionHeaderView("서영 님의 최근 리뷰")
+            CommonSectionHeaderView(model?.title ?? "")
                 .frame(height: 24)
             Spacer().frame(height: 8)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     Spacer().frame(width: 16)
-                    ForEach(0..<10) { _ in
-                        NavigationLink(destination: DetailWorkView(productId: 1)) {
-                            HomeContentsItemView()
+                    ForEach(model?.productList ?? [], id: \.uuid) { product in
+                        NavigationLink(destination: DetailWorkView(productId: product.id ?? 0)) {
+                            HomeContentsItemView(model: product)
                                 .frame(width: itemViewWidth)
                         }
                         Spacer().frame(width: 16)

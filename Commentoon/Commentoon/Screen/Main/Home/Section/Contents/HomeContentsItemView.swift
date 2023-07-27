@@ -9,19 +9,27 @@ import SwiftUI
 import Kingfisher
 
 struct HomeContentsItemView: View {
+    private let model: ProductModel?
     private let itemWidth: CGFloat = 119
+    
+    init(model: ProductModel?) {
+        self.model = model
+    }
     
     var body: some View {
         VStack {
-            KFImageView(url: "https://image.yes24.com/goods/117243156/XL")
+            KFImageView(url: model?.thumbUrl ?? "")
                 .frame(width: itemWidth, height: 125, alignment: .center)
                 .cornerRadius(20)
             Spacer().frame(height: 4)
             HStack {
                 Spacer().frame(width: 4)
-                Image(asset: Asset.Image.icStar)
+                Image(systemName: "star.fill")
+                    .resizable()
+                    .foregroundColor(Color(asset: Asset.Color.bluePointColor))
+                    .frame(width: 13, height: 13)
                 Spacer().frame(width: 2)
-                Text("4.5")
+                Text(String(format: "%.1f", model?.averageScore ?? 0.0))
                     .lineLimit(1)
                     .foregroundColor(.black)
                     .font(.system(size: 12, weight: .regular))
@@ -29,21 +37,16 @@ struct HomeContentsItemView: View {
                 Spacer()
             }
             .frame(height: 13)
-            Spacer().frame(height: 1)
+            Spacer().frame(height: 4)
             HStack {
                 Spacer().frame(width: 4)
-                Text("전지적 독자 시점 전지적 독자 시점 전지적 독자 시점 전지적 독자 시점")
+                Text(model?.title ?? "")
+                    .lineLimit(1)
                     .foregroundColor(.black)
                     .font(.system(size: 14, weight: .regular))
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(width: itemWidth - 4, alignment: .leading)
             }
         }
-    }
-}
-
-struct HomeContentsItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeContentsItemView()
     }
 }

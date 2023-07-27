@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3200CD632A715BC300EB34C2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3200CD622A715BC300EB34C2 /* HomeViewModel.swift */; };
+		3200CD662A715CAF00EB34C2 /* HomeTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3200CD652A715CAF00EB34C2 /* HomeTabModel.swift */; };
+		3200CD682A7161AE00EB34C2 /* HomeTabSlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3200CD672A7161AE00EB34C2 /* HomeTabSlotModel.swift */; };
 		3220768A298A6C7E00C9BDDE /* CommentoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32207689298A6C7E00C9BDDE /* CommentoonApp.swift */; };
 		3220768C298A6C7E00C9BDDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3220768B298A6C7E00C9BDDE /* ContentView.swift */; };
 		3220768E298A6C7F00C9BDDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3220768D298A6C7F00C9BDDE /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 /* Begin PBXFileReference section */
 		15E6A71CA424340A73E52CE0 /* Pods-Commentoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commentoon.release.xcconfig"; path = "Target Support Files/Pods-Commentoon/Pods-Commentoon.release.xcconfig"; sourceTree = "<group>"; };
 		190060999163E71BA7A15661 /* Pods-Commentoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Commentoon.debug.xcconfig"; path = "Target Support Files/Pods-Commentoon/Pods-Commentoon.debug.xcconfig"; sourceTree = "<group>"; };
+		3200CD622A715BC300EB34C2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3200CD652A715CAF00EB34C2 /* HomeTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabModel.swift; sourceTree = "<group>"; };
+		3200CD672A7161AE00EB34C2 /* HomeTabSlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabSlotModel.swift; sourceTree = "<group>"; };
 		32207686298A6C7E00C9BDDE /* Commentoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Commentoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32207689298A6C7E00C9BDDE /* CommentoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentoonApp.swift; sourceTree = "<group>"; };
 		3220768B298A6C7E00C9BDDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3200CD642A715CA200EB34C2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3200CD652A715CAF00EB34C2 /* HomeTabModel.swift */,
+				3200CD672A7161AE00EB34C2 /* HomeTabSlotModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		3220767D298A6C7E00C9BDDE = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +209,7 @@
 			children = (
 				32F4833A29B631A50015C904 /* Section */,
 				322076A0298A7DD000C9BDDE /* HomeView.swift */,
+				3200CD622A715BC300EB34C2 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -257,6 +273,7 @@
 		323ECEC02A41A8A700E3650A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3200CD642A715CA200EB34C2 /* Home */,
 				32FD19AA2A517B3E007398EA /* Review */,
 				323ECEC12A41A8AE00E3650A /* Product */,
 			);
@@ -664,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3200CD662A715CAF00EB34C2 /* HomeTabModel.swift in Sources */,
 				3230BF972A3315FC00C90002 /* StarRatingView.swift in Sources */,
 				32A4EF682A30A16D00A289BE /* APIManager.swift in Sources */,
 				322076AA298A7E5B00C9BDDE /* MyView.swift in Sources */,
@@ -686,6 +704,7 @@
 				32CE729429D0348000B8C56E /* HomeContentsSection.swift in Sources */,
 				324232AD2A0B8AF0009A0245 /* CommonSectionHeaderView.swift in Sources */,
 				3220768A298A6C7E00C9BDDE /* CommentoonApp.swift in Sources */,
+				3200CD632A715BC300EB34C2 /* HomeViewModel.swift in Sources */,
 				324232B22A0B8EA5009A0245 /* MyReviewItemView.swift in Sources */,
 				3230BF952A33131F00C90002 /* DetailWorkScoreSection.swift in Sources */,
 				322076A8298A7E5400C9BDDE /* SearchView.swift in Sources */,
@@ -695,6 +714,7 @@
 				32F563702A07B3D7009EAF0A /* MyHeaderGenreView.swift in Sources */,
 				32B97A4229CFDB9A0003AE29 /* Color.swift in Sources */,
 				3230BF992A33228800C90002 /* GraphView.swift in Sources */,
+				3200CD682A7161AE00EB34C2 /* HomeTabSlotModel.swift in Sources */,
 				32996BF22A1470D200684DA5 /* DetailWorkView.swift in Sources */,
 				323ECEBF2A41A78D00E3650A /* DetailWorkViewModel.swift in Sources */,
 				32B97A4529CFF6C00003AE29 /* KeyWindow+.swift in Sources */,

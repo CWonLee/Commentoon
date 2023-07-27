@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject private var viewModel = HomeViewModel()
+    
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 LazyVStack {
-                    HomeHeaderSection()
+                    HomeHeaderSection(model: viewModel.homeTabModel?.recommend ?? [])
                         .frame(height: 288)
                     Spacer().frame(height: 32)
-                    HomeContentsSection()
-                    HomeContentsSection()
-                    HomeContentsSection()
+                    ForEach(viewModel.homeTabModel?.slots ?? [], id: \.self) {
+                        HomeContentsSection(model: $0)
+                    }
                     Spacer()
                 }
             }
@@ -25,5 +27,8 @@ struct HomeView: View {
         }
         .ignoresSafeArea()
         .toolbar(.hidden, for: .navigationBar)
+        .onAppear {
+            viewModel.requestAPI()
+        }
     }
 }
