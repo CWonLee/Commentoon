@@ -47,11 +47,12 @@ struct KakaoLoginButton: View {
     
     private func requestKakaoToken(_ accessToken: String) {
         APIManager.request(name: "AuthKakao")
-            .headers(["Authorization": accessToken])
-            .responseModel(model: String.self) { result in
+            .headers(["Authorization": "Bearer \(accessToken)"])
+            .responseModel(model: LoginModel.self) { result in
                 switch result {
                 case .success(let response):
                     print("@@@@ response : \(response)")
+                    // 로그인 성공
                 case .failure(let error):
                     print("error : \(error)")
                 }

@@ -14,7 +14,7 @@ struct SplashView: View {
     var body: some View {
         VStack {
             if self.isActive {
-                TabbarView()
+                LoginView()
             } else {
                 Text("Splash View")
                     .font(Font.largeTitle)
@@ -27,11 +27,5 @@ struct SplashView: View {
                 }
             }
         }
-    }
-}
-
-struct SplashView_Previews: PreviewProvider {
-    static var previews: some View {
-        SplashView()
     }
 }
