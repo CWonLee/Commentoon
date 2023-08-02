@@ -13,20 +13,32 @@ import KakaoSDKAuth
 struct CommentoonApp: App {
     private let kakaoNativeAppKey = "d94eb822b129c110eeb1fac46058a2a5"
     
+    @StateObject private var screenState = ScreenState()
+    
     init() {
         KakaoSDK.initSDK(appKey: kakaoNativeAppKey)
     }
     
     var body: some Scene {
         WindowGroup {
-//            SplashView()
-            TabbarView()
-//            LoginView()
-//                .onOpenURL { url in
-//                    if AuthApi.isKakaoTalkLoginUrl(url) {
-//                        _ = AuthController.handleOpenUrl(url: url)
-//                    }
-//                }
+            switch screenState.state {
+            case .login:
+                TabbarView().environmentObject(screenState)
+            case .logout:
+                LoginView().environmentObject(screenState)
+            case .splash:
+                SplashView().environmentObject(screenState)
+            }
         }
     }
+}
+
+class ScreenState: ObservableObject {
+    enum State {
+        case splash
+        case login
+        case logout
+    }
+    
+    @Published var state: State = .splash
 }

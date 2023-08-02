@@ -11,6 +11,8 @@ import KakaoSDKAuth
 import KakaoSDKUser
 
 struct KakaoLoginButton: View {
+    @EnvironmentObject var screenState: ScreenState
+    
     var body: some View{
         Button {
             login()
@@ -51,8 +53,8 @@ struct KakaoLoginButton: View {
             .responseModel(model: LoginModel.self) { result in
                 switch result {
                 case .success(let response):
-                    print("@@@@ response : \(response)")
-                    // 로그인 성공
+                    CTUserDefaults.shared.accessToken = response.accessToken ?? ""
+                    screenState.state = .login
                 case .failure(let error):
                     print("error : \(error)")
                 }
