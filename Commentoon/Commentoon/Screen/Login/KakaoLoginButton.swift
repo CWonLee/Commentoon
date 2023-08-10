@@ -53,8 +53,11 @@ struct KakaoLoginButton: View {
             .responseModel(model: LoginModel.self) { result in
                 switch result {
                 case .success(let response):
-                    CTUserDefaults.shared.accessToken = response.accessToken ?? ""
-                    screenState.state = .login
+                    print("@@@@ login response : \(response)")
+                    DispatchQueue.main.async {
+                        CTUserDefaults.shared.accessToken = response.accessToken ?? ""
+                        screenState.state = .login
+                    }
                 case .failure(let error):
                     print("error : \(error)")
                 }

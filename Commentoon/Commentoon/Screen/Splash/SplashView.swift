@@ -17,6 +17,7 @@ struct SplashView: View {
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 withAnimation {
+                    print("#### \(CTUserDefaults.shared.accessToken)")
                     if CTUserDefaults.shared.accessToken.isEmpty {
                         self.screenState.state = .logout
                     } else {

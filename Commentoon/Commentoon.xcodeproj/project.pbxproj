@@ -21,6 +21,8 @@
 		322076AA298A7E5B00C9BDDE /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322076A9298A7E5B00C9BDDE /* MyView.swift */; };
 		322076AD298A805300C9BDDE /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322076AC298A805300C9BDDE /* Image.xcassets */; };
 		322076AF298AB92D00C9BDDE /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322076AE298AB92D00C9BDDE /* Color.xcassets */; };
+		322AFCBC2A851809002E769C /* MeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AFCBB2A851809002E769C /* MeModel.swift */; };
+		322AFCBE2A85196E002E769C /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AFCBD2A85196E002E769C /* MyViewModel.swift */; };
 		3230BF932A33119600C90002 /* DetailWorkScoreSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230BF922A33119600C90002 /* DetailWorkScoreSectionHeaderView.swift */; };
 		3230BF952A33131F00C90002 /* DetailWorkScoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230BF942A33131F00C90002 /* DetailWorkScoreSection.swift */; };
 		3230BF972A3315FC00C90002 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3230BF962A3315FC00C90002 /* StarRatingView.swift */; };
@@ -78,6 +80,8 @@
 		322076A9298A7E5B00C9BDDE /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		322076AC298A805300C9BDDE /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		322076AE298AB92D00C9BDDE /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		322AFCBB2A851809002E769C /* MeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeModel.swift; sourceTree = "<group>"; };
+		322AFCBD2A85196E002E769C /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
 		3230BF922A33119600C90002 /* DetailWorkScoreSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorkScoreSectionHeaderView.swift; sourceTree = "<group>"; };
 		3230BF942A33131F00C90002 /* DetailWorkScoreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorkScoreSection.swift; sourceTree = "<group>"; };
 		3230BF962A3315FC00C90002 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 			children = (
 				32F5636B2A078D1D009EAF0A /* Section */,
 				322076A9298A7E5B00C9BDDE /* MyView.swift */,
+				322AFCBD2A85196E002E769C /* MyViewModel.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -253,6 +258,14 @@
 				32B97A4129CFDB9A0003AE29 /* Color.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		322AFCBA2A8517FF002E769C /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				322AFCBB2A851809002E769C /* MeModel.swift */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		3230BF912A33117F00C90002 /* Score */ = {
@@ -277,6 +290,7 @@
 		323ECEC02A41A8A700E3650A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				322AFCBA2A8517FF002E769C /* Me */,
 				32E991822A7A39BE003C7161 /* Login */,
 				3200CD642A715CA200EB34C2 /* Home */,
 				32FD19AA2A517B3E007398EA /* Review */,
@@ -706,6 +720,7 @@
 				3200CD662A715CAF00EB34C2 /* HomeTabModel.swift in Sources */,
 				3230BF972A3315FC00C90002 /* StarRatingView.swift in Sources */,
 				32A4EF682A30A16D00A289BE /* APIManager.swift in Sources */,
+				322AFCBC2A851809002E769C /* MeModel.swift in Sources */,
 				322076AA298A7E5B00C9BDDE /* MyView.swift in Sources */,
 				32B97A4729D001750003AE29 /* HomeHeaderSection.swift in Sources */,
 				3230BF932A33119600C90002 /* DetailWorkScoreSectionHeaderView.swift in Sources */,
@@ -726,6 +741,7 @@
 				32CE729429D0348000B8C56E /* HomeContentsSection.swift in Sources */,
 				324232AD2A0B8AF0009A0245 /* CommonSectionHeaderView.swift in Sources */,
 				3220768A298A6C7E00C9BDDE /* CommentoonApp.swift in Sources */,
+				322AFCBE2A85196E002E769C /* MyViewModel.swift in Sources */,
 				3200CD632A715BC300EB34C2 /* HomeViewModel.swift in Sources */,
 				324232B22A0B8EA5009A0245 /* MyReviewItemView.swift in Sources */,
 				32E991842A7A39CC003C7161 /* LoginModel.swift in Sources */,

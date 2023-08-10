@@ -9,7 +9,13 @@ import SwiftUI
 import Kingfisher
 
 struct MyHeaderSection: View {
-    let imageUrl = "https://i.ytimg.com/vi/u_gFUK09HZE/maxresdefault.jpg"
+    @EnvironmentObject var screenState: ScreenState
+    private let model: MeModel?
+    
+    init(model: MeModel?) {
+        self.model = model
+    }
+    
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
@@ -17,20 +23,20 @@ struct MyHeaderSection: View {
                 HStack(alignment: .top) {
                     Spacer().frame(width: 20)
                     VStack {
-                        KFImageView(url: imageUrl)
+                        KFImageView(url: model?.thumbUrl ?? "")
                             .frame(width: 76, height: 76)
                             .cornerRadius(38)
                         Spacer().frame(height: 0)
                     }
                     Spacer().frame(width: 13)
                     VStack(alignment: .leading, spacing: 3) {
-                        Text("강아지좋아 님 떼이잉떼이잉떼이잉떼이잉떼이잉떼이잉떼이잉떼이잉떼이잉떼이잉떼이잉")
+                        Text(model?.nickname ?? "")
                             .foregroundColor(.black)
                             .lineLimit(1)
                             .font(.system(size: 16, weight: .medium))
                             .padding(.trailing, 30)
                         
-                        Text("판타지 장르를 좋아합니다. 다른 장르도 보긴 하는데 리뷰는 안 써요 판타지 장르를 좋아합니다. 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요 다른 장르도 보긴 하는데 리뷰는 안 써요")
+                        Text(model?.introText ?? "")
                             .foregroundColor(Color(asset: Asset.Color.gray004))
                             .font(.system(size: 11, weight: .regular))
                             .padding(.trailing, 20)
@@ -41,10 +47,12 @@ struct MyHeaderSection: View {
                 Spacer().frame(height: 13)
                 HStack {
                     Spacer().frame(width: 20)
-                    ForEach(0..<4) { idx in
-                        MyHeaderGenreView("판타지zzㅋ")
-                        if idx != 4 {
-                            Spacer().frame(width: 8)
+                    if let genres = model?.preferGenreList {
+                        ForEach(genres.indices, id: \.self) { index in
+                            MyHeaderGenreView(genres[index])
+                            if index != genres.count - 1 {
+                                Spacer().frame(width: 8)
+                            }
                         }
                     }
                     Spacer(minLength: 20)
@@ -53,7 +61,7 @@ struct MyHeaderSection: View {
                 HStack {
                     Spacer().frame(width: 57)
                     VStack(spacing: 5) {
-                        Text("120000")
+                        Text("\(model?.followerCount ?? 0)")
                             .foregroundColor(.black)
                             .font(.system(size: 14, weight: .medium))
                         Text("팔로워")
@@ -62,7 +70,7 @@ struct MyHeaderSection: View {
                     }
                     Spacer()
                     VStack(spacing: 5) {
-                        Text("120000")
+                        Text("\(model?.followingCount ?? 0)")
                             .foregroundColor(.black)
                             .font(.system(size: 14, weight: .medium))
                         Text("팔로잉")
@@ -71,7 +79,7 @@ struct MyHeaderSection: View {
                     }
                     Spacer()
                     VStack(spacing: 5) {
-                        Text("120000")
+                        Text("\(model?.reviewCount ?? 0)")
                             .foregroundColor(.black)
                             .font(.system(size: 14, weight: .medium))
                         Text("리뷰 수")
@@ -91,6 +99,10 @@ struct MyHeaderSection: View {
                         .frame(width: 17, height: 17)
                         .padding(.top, 12)
                         .padding(.trailing, 11)
+                        .onTapGesture {
+                            CTUserDefaults.shared.accessToken = ""
+                            self.screenState.state = .logout
+                        }
                 }
                 Spacer()
             }
